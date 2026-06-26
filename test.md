@@ -1,3 +1,4 @@
+
 #                   Название: DevShelf
 ---
  ###   Ваша техническая библиотека в одном клике:
@@ -51,10 +52,20 @@ DevShelf помогает разработчикам отслеживать пр
   ---
   ####             Технологический стек
 
-|Frontend|  |Backend|    |Database|
+|Frontend | Backend|Database|Dokumentation|
+|---------|--------|---------| -------------------------|
+|React, SCSS.| Node.js, Express.|PostgreSQL| storebook  
+---
 
-|--------|  |-------|    |--------|
-
-| React  |  |SCSS Node.js|PostgreSQL|
-                           
-                         PostgreSQL. Документация: Storybook.
+####  Как помочь проекту (контрибьюция):
+* **✔️Форкнуть репозиторий**
+  * **✔️Создать ветку**
+`  it checut -b feature/amazing-idea`
+  *  **З✔️акомитить измененения** 
+  `git commit -m 'Добавил крутую фичу'`
+  * **✔️Запушить** 
+  `git push origin feature/amazing-idea` 
+  * **✔️Открыть**   
+  ` Pull Request`
+  ---
+  
