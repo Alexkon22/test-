@@ -1,0 +1,30 @@
+name: Автоисправление Markdown
+
+on:
+  push:
+    paths:
+      - '**.md'
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      
+      - name: Установить Prettier
+        run: npm install -g prettier
+      
+      - name: Автоисправление всех .md файлов
+        run: prettier --write '**/*.md'
+      
+      - name: Закоммитить исправления
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -m "📝 Автоисправление Markdown"
+          git push
