@@ -157,7 +157,7 @@ devshelf add "Чистая архитектура" --author "Роберт Мар
 
 # Обновление прогресса
 devshelf progress "Чистая архитектура" --page 200
-```
+
 </details>
 
 
