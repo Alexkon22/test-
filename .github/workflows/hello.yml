@@ -1,0 +1,19 @@
+name: Hello World
+
+# Запускать при пуше в любую ветку + вручную кнопкой
+on:
+  push:
+  workflow_dispatch:   # позволяет запускать вручную из вкладки Actions
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Скачать код репозитория
+        uses: actions/checkout@v4
+
+      - name: Поздороваться
+        run: echo "Привет! Мой первый workflow работает 🎉"
+
+      - name: Показать файлы в репозитории
+        run: ls -la
